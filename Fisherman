@@ -1,0 +1,25 @@
+# Fisherman Project
+
+print("Welcome, Fisherman!")
+
+# Get fish weight in pounds
+pounds = float(input("Enter the weight of the fish (in pounds): "))
+
+# Convert pounds to kilograms (1 pound = 0.453592 kg)
+kilograms = pounds * 0.453592
+print(f"Fish weight in kilograms: {kilograms:.2f} kg")
+
+# Payment calculation and rewards
+base_payment = 100  # base threshold in kilograms
+
+if kilograms > base_payment:
+    print("Congrats! You caught a big fish.")
+    print("You will receive double payment!")
+
+    if kilograms > base_payment + 50:
+        print("You get 4 special fishing gifts:")
+        gifts = ["Fishing Rod", "Fishing Bucket", "Fishing Hat", "Fishing Boat"]
+        for gift in gifts:
+            print(f"- {gift}")
+else:
+    print("Thanks for fishing! Better luck next time.")
